@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="pokedex-main">
+      <header class="pokedex-header">
+        <div class="container">
+          <div class="logo-container">
+            <img src="assets/img/pokeball.svg" alt="pokeball" class="logo-image" />
+            <h1 class="logo-text">Pokedex</h1>
+          </div>
+          <div class="search-container">
+            <div class="search-box">
+              <img src="assets/img/search.svg" alt="search icon" class="search-icon" />
+              <input type="text" class="search-input" placeholder="Search by name or number" id="search-input" />
+              <img src="assets/img/cross.svg" alt="clear search" class="clear-search-icon" id="clear-search-icon" />
+            </div>
+            <div class="generation-filter">
+              <button id="generation-filter-btn" class="generation-filter-btn">
+                <img src="assets/img/filter.svg" alt="filter icon" class="filter-icon" /> Gens
+              </button>
+              <div id="generation-dropdown" class="generation-dropdown hidden">
+                <p class="filter-title">Select Gen(s):</p>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="generation" value="1" checked /> Gen 1</label>
+                  <label><input type="checkbox" name="generation" value="2" /> Gen 2</label>
+                  <label><input type="checkbox" name="generation" value="3" /> Gen 3</label>
+                  <label><input type="checkbox" name="generation" value="4" /> Gen 4</label>
+                  <label><input type="checkbox" name="generation" value="5" /> Gen 5</label>
+                  <label><input type="checkbox" name="generation" value="6" /> Gen 6</label>
+                  <label><input type="checkbox" name="generation" value="7" /> Gen 7</label>
+                  <label><input type="checkbox" name="generation" value="8" /> Gen 8</label>
+                  <label><input type="checkbox" name="generation" value="9" /> Gen 9</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="pokemon-grid">
+        <div class="container">
+          <div id="pokemon-list" class="pokemon-list"></div>
+        </div>
+        <div id="not-found-message" class="not-found-message">Pokemon not found</div>
+      </section>
+    </main>
+
+    <div id="pokemon-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="pokemon-details" class="pokemon-details"></div>
+      </div>
+    </div>
+    <button id="scroll-to-top" class="scroll-to-top hidden">
+      <img src="assets/img/arr_top.svg" alt="Scroll to top" class="scroll-icon" />
+    </button>
+
+    <script src="assets/js/pokedex.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/modal.js"></script>
+  </body>
+</html>
